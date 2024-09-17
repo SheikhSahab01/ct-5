@@ -16,9 +16,9 @@ body {
   font-weight: 600;
   color: #223645;
   text-transform: capitalize;
+  padding: 10px 15px !important;
 }
 .header .navbar .nav-item .nav-link {
-  padding: 10px 15px !important;
   font-size: 18px;
   color: #223645;
   font-weight: 600;
@@ -28,6 +28,7 @@ body {
   color: #b83336;
 }
 .header .navbar .nav-item .nav-link.btn-apply {
+  padding: 10px 15px !important;
   text-decoration: none;
   color: #fff;
   background-color: #b83336;
@@ -46,7 +47,6 @@ body {
     top: 99%;
     left: 0;
     right: 0;
-    text-align: center;
   }
   .header .navbar .collapse .navbar-text {
     padding: 0 !important;
@@ -57,7 +57,6 @@ body {
 }
 @media screen and (min-width: 993px) and (max-width: 1199px) {
   .header .navbar .nav-link {
-    padding: 10px !important;
     font-size: 16px;
   }
 }
@@ -450,6 +449,27 @@ body {
 .testimonials, .about {
   margin-top: 100px;
 }
+.testimonials .portfolio-header, .about .portfolio-header {
+  text-align: center;
+}
+.testimonials .portfolio-header h5, .about .portfolio-header h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #223645;
+}
+.testimonials .portfolio-header h2, .about .portfolio-header h2 {
+  padding-top: 10px;
+  font-size: 35px;
+  color: #223645;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 50px;
+}
+.testimonials .portfolio-header h2 span, .about .portfolio-header h2 span {
+  padding-top: 10px;
+  color: #b83336;
+  font-weight: 700;
+}
 .testimonials .section-heading h2, .about .section-heading h2 {
   color: #fff;
 }
@@ -577,7 +597,22 @@ body {
 
 .widget {
   font-family: "Poppins", sans-serif;
-  margin-top: 100px;
+  margin-bottom: 70px;
+}
+.widget .btn-apply {
+  padding: 10px 15px !important;
+  text-decoration: none;
+  color: #fff;
+  background-color: #b83336;
+  border-radius: 8px;
+  float: left;
+  transition: all transition;
+  text-wrap: nowrap;
+  max-width: 400px;
+  margin: 0 10px;
+}
+.widget .btn-apply:hover {
+  background-color: #223645;
 }
 .widget .key-features h6 {
   text-align: center;
@@ -630,6 +665,9 @@ body {
   transition: linear 0.1s;
 }
 @media screen and (max-width: 520px) {
+  .widget .btn-apply {
+    max-width: 200px;
+  }
   .widget .key-features h2 {
     font-size: 32px;
   }
@@ -844,5 +882,42 @@ body {
   }
   .learnings .learning-list {
     grid-template-columns: 1fr;
+  }
+}
+
+.main {
+  margin-top: 70px;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
+.flyout {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Hide the flyout by default */
+  width: 500px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: right 0.5s ease-in-out;
+  z-index: 1000000;
+}
+.flyout h2 span {
+  cursor: pointer;
+}
+
+.flyout-content {
+  padding: 20px;
+}
+
+.flyout.open {
+  right: 0; /* Show the flyout when open */
+}
+
+@media screen and (max-width: 520px) {
+  .flyout {
+    width: 300px;
   }
 }/*# sourceMappingURL=custom.css.map */

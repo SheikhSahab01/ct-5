@@ -22,9 +22,9 @@ body{
       font-weight: 600;
       color: $primary-color;
       text-transform: capitalize;
+      padding: 10px 15px !important;
 
       .nav-link {
-        padding: 10px 15px !important;
         font-size: 18px;
         color: $primary-color;
         font-weight: 600;
@@ -35,6 +35,7 @@ body{
         }
 
         &.btn-apply{
+          padding: 10px 15px !important;
           text-decoration: none;
           color: $white-color;
           background-color: $secondary-color;
@@ -59,7 +60,7 @@ body{
         top: 99%;
         left: 0;
         right: 0;
-        text-align: center;
+        // text-align: center;
 
         .navbar-text{
           padding: 0 !important;
@@ -72,7 +73,7 @@ body{
 
     @media screen and (min-width: 993px) and (max-width:1199px){
         .nav-link{
-            padding: 10px !important;
+            // padding: 10px !important;
             font-size: 16px;
         }
     }
@@ -535,6 +536,29 @@ body{
 
 .testimonials, .about{
   margin-top: 100px;
+  .portfolio-header{
+    text-align: center;
+    h5{
+      font-size: 15px;
+      font-weight: 600;
+      color: $primary-color;
+    }
+  
+    h2{ 
+      padding-top: 10px;
+      font-size: 35px;
+      color: $primary-color;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 50px;
+      span{
+        padding-top: 10px;
+        color: $secondary-color;
+        font-weight: 700;
+      }
+  
+    }
+  }
 
   .section-heading{
       h2{
@@ -682,7 +706,23 @@ body{
 
 .widget{
   font-family: 'Poppins', sans-serif;
-  margin-top: 100px;
+  margin-bottom: 70px;
+  .btn-apply{
+    padding: 10px 15px !important;
+    text-decoration: none;
+    color: $white-color;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    float: left;
+    transition: all transition;
+    text-wrap: nowrap;
+    max-width: 400px;
+    margin: 0 10px;
+
+    &:hover{
+        background-color: $primary-color;
+    }
+  }
   .key-features{
     h6{
       text-align: center;
@@ -743,6 +783,9 @@ body{
   }
 
   @media screen and (max-width: 520px){
+    .btn-apply{
+      max-width: 200px;
+    }
     .key-features{
       h2{
         font-size: 32px;
@@ -993,4 +1036,51 @@ body{
           grid-template-columns: 1fr;
         }
       }
+  }
+
+
+
+
+  // products page stylings
+
+  .main{
+    margin-top: 70px;
+  }
+
+  .mt-120{
+    margin-top: 120px;
+  }
+
+  // flyout css
+
+  .flyout {
+    position: fixed;
+    top: 0;
+    right: -500px; /* Hide the flyout by default */
+    width: 500px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out;
+    z-index: 1000000;
+
+    h2{
+      span{
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .flyout-content {
+    padding: 20px;
+  }
+  
+  .flyout.open {
+    right: 0; /* Show the flyout when open */
+  }
+
+  @media screen and (max-width: 520px){
+    .flyout{
+      width: 300px;
+    }
   }
